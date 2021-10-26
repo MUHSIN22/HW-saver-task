@@ -48,7 +48,7 @@ export default function AlbumsAndPost() {
                         }
                     </div>
                     </Route>
-                    <Route path="/albums">
+                    <Route path="/albums" exact>
                         <Albums/>
                     </Route>
                 </Switch>

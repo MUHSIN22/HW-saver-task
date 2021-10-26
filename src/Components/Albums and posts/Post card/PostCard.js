@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './PostCard.scss';
 import CommentCard from '../Comment card/CommentCard';
+import { useHistory } from 'react-router';
 
 export default function PostCard({ cardHeading, cardDescription,userId ,cardId ,album}) {
     const [ userProfile, setUserProfile ] = useState()
     const [ isComments, setIsComments] = useState(false)
     const [comments, setComments] = useState(null)
+    const history = useHistory();
 
     useEffect(() =>{
         getCardDetails()
@@ -38,7 +40,6 @@ export default function PostCard({ cardHeading, cardDescription,userId ,cardId ,
 
     return (
         <div className="post-card">
-            
             {
                 userProfile &&
                 <div className="profile-section">
@@ -51,7 +52,7 @@ export default function PostCard({ cardHeading, cardDescription,userId ,cardId ,
             <p>{cardDescription}</p>
             {
                 album &&
-                <button className="btn-album">View Album</button>
+                <button onClick={() => history.push(`/view-album/${cardId}`)} className="btn-album">View Album</button>
             }
 
             {
