@@ -1,0 +1,61 @@
+@import '/src/Components/StyleAssets/mixins';
+
+.navbar{
+    @include container;
+    margin: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+    padding: 0.5rem 0;
+    padding-top: 2rem;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+    ul{
+        list-style: none;
+        display: flex;
+    }
+    a{
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: #8A8A8A;
+        margin-right: 2rem;
+    }
+    .link-active{
+        color: #000000;
+        position: relative;
+        &::after{
+            content: "";
+            width: 100%;
+            animation: line-fill 0.4s ease;
+            height: 1px;
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            background: #000;
+        }
+    }
+}
+@media only screen and (max-width:580px){
+    .navbar{
+        display: flex;
+        padding: 0.5rem 1rem;
+        padding-top: 1rem;
+        ul{
+            margin: auto;
+        }
+        a{
+            margin: 0 1rem;
+        }
+    }
+}
+
+// Animation
+@keyframes line-fill {
+    0%{
+        width:0;
+    }
+    100%{
+        width:100%;
+        
+    }
+}

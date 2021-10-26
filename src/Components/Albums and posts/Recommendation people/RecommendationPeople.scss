@@ -1,0 +1,36 @@
+.recommendation-people{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    img{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    button {
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        background: #EAEAEA;
+        border: none;
+        margin-left: auto;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            background: #dbdbdb;
+        }
+    }
+    .btn-follow-enabled{
+        background: #2e2e2e;
+        color: #fff;
+        &:hover{
+            background: rgba(0, 0, 0, 0.808);
+        }
+    }
+}

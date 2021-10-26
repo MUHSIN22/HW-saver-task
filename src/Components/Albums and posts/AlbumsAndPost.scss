@@ -1,0 +1,52 @@
+@import '/src/Components/StyleAssets/mixins';
+
+.album-and-post-section{
+    @include container;
+    margin: auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+    grid-template-areas: "main-content recommend";
+    .recommendation{
+        grid-area: recommend;
+    }
+    .recommendation-wrapper{
+        position: sticky;
+        top: 5rem;
+    }
+    .recommend-head{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .post-card-wrapper{
+        grid-area: main-content;
+        max-width: 800px;
+        display: grid;
+        grid-row-gap: 1rem;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .album-and-post-section{
+        grid-template-columns: 2.5fr 1fr;
+        .post-card-wrapper{
+            width:80%;
+        }
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .album-and-post-section{
+        grid-column-gap: 2rem;
+        grid-template-columns: 2fr 1fr;
+        .post-card-wrapper{
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .album-and-post-section{
+        grid-template-columns: 1fr;
+        .recommendation{
+            display: none;
+        }
+    }
+}

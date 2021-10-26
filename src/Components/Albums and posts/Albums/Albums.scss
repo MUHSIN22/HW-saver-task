@@ -1,0 +1,16 @@
+.albums-section{
+    max-width: 800px;
+    grid-area: main-content;
+    display: grid;
+    grid-row-gap: 1rem;
+}
+@media only screen and (max-width:1200px){
+    .albums-section{
+        width:80%
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .albums-section{
+        width:100%;
+    }
+}

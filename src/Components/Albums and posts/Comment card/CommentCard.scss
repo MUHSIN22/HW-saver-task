@@ -1,0 +1,21 @@
+.comment-card{
+    border-top: 1px solid #1d3557;
+    padding: 1rem 0;
+    h6{
+        font-size: 1.1rem;
+    }
+    p{
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .comment-card{
+        h6{
+            font-size: 0.9rem;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
+}
